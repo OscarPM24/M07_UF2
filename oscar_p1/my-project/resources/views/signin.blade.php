@@ -27,7 +27,7 @@
                 <input type="submit" value="Enviar" required>
             </div>
             <div>
-                <a href="signup">Crea usuari</a>
+                <a href="{{ url('oscar/signup') }}">Crea usuari</a>
             </div>
         </form>
     </div>

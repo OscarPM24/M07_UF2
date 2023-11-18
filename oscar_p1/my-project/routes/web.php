@@ -21,6 +21,13 @@ Route::get("/", function() {
 
 // Controlador
 Route::prefix("oscar")->group(function () {
+    // Signin
+    Route::get('/signin', [SignController::class, 'signin']);
+    // Signup
+    Route::get('/signup', [SignController::class, 'signup']);
+
+
+
     // Signin 4 parametres
     Route::get('/signin/{iniciar}/{sessio}/{de}/{usuari}', [SignController::class, 'signin2']);
     // Signup 3 parametres

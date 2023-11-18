@@ -46,7 +46,7 @@
                 <input type="submit" value="Inserir dades" required>
             </div>
             <div>
-                <a href="signin">Iniciar sessió</a>
+                <a href="{{ url('oscar/signin') }}">Iniciar sessió</a>
             </div>
         </form>
     </div>
