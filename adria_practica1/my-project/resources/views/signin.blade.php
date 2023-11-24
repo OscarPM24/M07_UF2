@@ -7,7 +7,9 @@
     <title>Login user</title>
 </head>
 <body>
-    <form method="POST" action="usuari.php">
+    
+    <form method="POST" action="{{ route('admin_db') }}">
+    @csrf
       <!-- inserim textResult com a variable global la qual rebrà un valor segons la ruta -->
       <!-- Aquesta variable per defecte (/Adria/signin) val 'Iniciar sessió de l'usuari' -->
       <!-- Aquesta variable amb parametres (/Adria/signin/param1/param2/param3/param4) val els valors de casa slash(/) concatenats -->
@@ -21,10 +23,10 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button type="submit" name="env">Enviar</button><br>
+        <button type="submit">Enviar</button><br>
         <!-- <a> per redirigir a la view de signup -->
         <!-- Fem servir la instància url() per cridar el path Adria/signin -->
-        <a href="{{ url('Adria/signup') }}">Crear usuari</a><br>
+        <a href="{{ route('signup') }}">Crear usuari</a><br>
       </form>
 </body>
 </html>
