@@ -8,11 +8,11 @@ class SignController extends Controller
 {
  
     public function signin() {
-        return view("signin")->with("title","Iniciar sessió de l'usuari");
+        return view("signin");
     }
 
     public function signup() {
-        return view("signup")->with("title","Creació d'usuari nou");
+        return view("signup");
     }
 
 
@@ -26,6 +26,11 @@ class SignController extends Controller
         $title = '';
         $title .= $creacio . ' ' . $usuari .' '. $nou;
         return view('signup')->with('title',$title);
+    }
+
+    public function products(Request $request) {
+        $text = $request['product'];
+        return view('products')->with(['result'=> $text]);
     }
 }
 
