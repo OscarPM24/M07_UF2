@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <form method="POST" action="{{ route('admin_db') }}">
+    <form method="POST" action="{{ route('admin_view') }}">
     @csrf
       <!-- inserim textResult com a variable global la qual rebrà un valor segons la ruta -->
       <!-- Aquesta variable per defecte (/Adria/signin) val 'Iniciar sessió de l'usuari' -->

@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>BENVINGUT/DA ADMIN</h1>
-    <a>CENTRES</a>
-    <a>PROFESSORAT</a>
-    <a>ALUMNAT</a><br>
-    <a>Log Out</a>
+    <a href="">CENTRES</a>
+    <a href="">PROFESSORAT</a>
+    <a href="">ALUMNAT</a><br>
+    <a href="">Log Out</a>
 </body>
 </html>
