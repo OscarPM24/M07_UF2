@@ -10,12 +10,16 @@ use Illuminate\Http\Request;
 class SignController extends Controller {
     // funció que retorna la view 'signin' assignan un valor predefinit a la variable textResult
     public function signIn() {
-        return view('signin')->with('textResult', "Iniciar sessió de l'usuari");
+        return view('signin')
+        ->with('textResult', "Iniciar sessió de l'usuari")
+        ->with('error', "");
     }
     // funció que retorna la view 'signin' substituint el valor de textResult pel valor dels paràmetres que li passem
     public function signIn2($var1, $var2, $var3, $var4) {
         $text = $var1 . " " . $var2 . " " . $var3 . " " . $var4;
-        return view('signin')->with('textResult', $text);
+        return view('signin')
+        ->with('textResult', $text)
+        ->with('error', "");
     }
     // funció que retorna la view 'signup' assignan un valor predefinit a la variable textResult
     public function signUp() {
