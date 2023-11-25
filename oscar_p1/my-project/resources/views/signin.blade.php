@@ -7,6 +7,9 @@
 </head>
 <body>
     <div>
+        <h1>
+            {{ $title }}
+        </h1>
         <form method="POST" action="{{ route('usuaris') }}">
             @csrf
 

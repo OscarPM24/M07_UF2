@@ -8,11 +8,11 @@ class SignController extends Controller
 {
  
     public function signin() {
-        return view("signin");
+        return view("signin")->with('title',"Iniciar Sessió de l'Usuari");
     }
 
     public function signup() {
-        return view("signup");
+        return view("signup")->with('title',"Creació d'Usuari Nou");
     }
 
 

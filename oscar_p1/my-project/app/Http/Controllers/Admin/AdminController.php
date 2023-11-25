@@ -15,7 +15,11 @@ class AdminController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         if ($admin_email == $email && $admin_password == $password) return view('Admin.admin');
-        else return view('signin');
+        else return view('signin')->with('title',"Iniciar Sessió de l'Usuari");;
+    }
+
+    public function usuaris2() {
+        return view('Admin.admin');
     }
 
     public function centres() {

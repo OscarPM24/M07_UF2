@@ -6,20 +6,23 @@
     <title>Alumnat</title>
 </head>
 <body>
-    <table>
-        <th>
-        <td>ID</td><td>Name</td><td>Address</td><td>CP</td><td>City</td>
-        </th>
-        @foreach ($alumnat as $alumne)
-            <tr>
-                <td>{{ $alumne->id }}</td>
-                <td>{{ $alumne->name }}</td>
-                <td>{{ $alumne->surname }}</td>
-                <td>{{ $alumne->rol }}</td>
-                <td>{{ $alumne->email }}</td>
-            </tr>
-        @endforeach
-    </table>
+    <div>
+        <table>
+            <th>
+                <td>ID</td><td>Name</td><td>Surname</td><td>Rol</td><td>Email</td>
+            </th>
+            @foreach ($alumnat as $alumne)
+                <tr>
+                    @foreach ($alumne as $valor)
+                    <td>{{ $valor }}</td>
+                    @endforeach
+                </tr>
+            @endforeach
+        </table>
+    </div>
+    <div>
+        <a href="{{ route('usuaris2') }}">Back</a>
+    </div>
 
 </body>
 </html>

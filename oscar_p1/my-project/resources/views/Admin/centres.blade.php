@@ -6,20 +6,22 @@
     <title>Centres</title>
 </head>
 <body>
-    <table>
-        <th>
-        <td>ID</td><td>Name</td><td>Address</td><td>CP</td><td>City</td>
-        </th>
-        @foreach ($centres as $centre)
-            <tr>
-                
-                <td>{{ $centre->name }}</td>
-                <td>{{ $centre->address }}</td>
-                <td>{{ $centre->cp }}</td>
-                <td>{{ $centre->city }}</td>
-            </tr>
-        @endforeach
-    </table>
-
+    <div>
+        <table>
+            <th>
+            <td>ID</td><td>Name</td><td>Address</td><td>CP</td><td>City</td>
+            </th>
+            @foreach ($centres as $centre)
+                <tr>
+                    @foreach ($centre as $valor)
+                    <td>{{ $valor }}</td>
+                    @endforeach
+                </tr>
+            @endforeach
+        </table>
+    </div>
+    <div>
+        <a href="{{ route('usuaris2') }}">Back</a>
+    </div>
 </body>
 </html>
