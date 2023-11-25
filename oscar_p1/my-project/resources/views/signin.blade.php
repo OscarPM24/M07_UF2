@@ -7,10 +7,12 @@
 </head>
 <body>
     <div>
-        <h1>{{ $title }}</h1>
-    </div>
-    <div>
-        <form>
+        <h1>
+            {{ $title }}
+        </h1>
+        <form method="POST" action="{{ route('usuaris') }}">
+            @csrf
+
             <div>
                 <label>Email</label><br>
                 <input type="text" name="email" required>
@@ -24,10 +26,10 @@
                 <input type="checkbox" name="remember">
             </div>
             <div>
-                <input type="submit" value="Enviar" required>
+                <button type="submit" name="enviar">Enviar</button>
             </div>
             <div>
-                <a href="{{ url('oscar/signup') }}">Crea usuari</a>
+                <a href="{{ route('signup') }}">Crea usuari</a>
             </div>
         </form>
     </div>

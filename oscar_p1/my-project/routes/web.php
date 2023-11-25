@@ -22,14 +22,16 @@ Route::get("/", function() {
 // Controlador
 Route::prefix("oscar")->group(function () {
     // Signin
-    Route::get('/signin', [SignController::class, 'signin']);
+    Route::get('/signin', [SignController::class, 'signin'])->name('signin');
     // Signup
-    Route::get('/signup', [SignController::class, 'signup']);
-
-
+    Route::get('/signup', [SignController::class, 'signup'])->name('signup');
 
     // Signin 4 parametres
     Route::get('/signin/{iniciar}/{sessio}/{de}/{usuari}', [SignController::class, 'signin2']);
     // Signup 3 parametres
     Route::get('/signup/{creacio}/{usuari}/{nou}', [SignController::class, 'signup2']);
+});
+
+Route::prefix('metodepost')->group(function () {
+    Route::post('/products', [SignController::class, 'products'])->name('products');
 });

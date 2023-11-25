@@ -10,7 +10,9 @@
         <h1>{{ $title }}</h1>
     </div>
     <div>
-        <form>
+        <form method="POST">
+            @csrf
+            
             <div>
                 <label>Id</label><br>
                 <input type="number" name="id" required>
@@ -43,10 +45,10 @@
                 <input type="checkbox" name="active">
             </div>
             <div>
-                <input type="submit" value="Inserir dades" required>
+                <button type="submit" name="enviar"><a href="{{ route('signin') }}"></a>Enviar</button>
             </div>
             <div>
-                <a href="{{ url('oscar/signin') }}">Iniciar sessió</a>
+                <a href="{{ route('signin') }}">Iniciar Sessió</a>
             </div>
         </form>
     </div>
