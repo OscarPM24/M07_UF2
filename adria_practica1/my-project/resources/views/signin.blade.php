@@ -5,6 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login user</title>
+    <style>
+        input {
+            margin:5px;
+        }
+        label, input, div, button, a {
+            padding: 5px;
+        }
+        body, button, select, input {
+            font-family: Verdana;
+            font-weight: bold;
+        }
+        h1 {
+            text-decoration: underline;
+        }
+        button, select, input {
+          font-size: 15px;
+        }
+        button {
+          margin: 10px;
+        }        
+        a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+        a:hover {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     
