@@ -35,6 +35,7 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+            /* Adició a rutes middleware a 'admin_db' */
             Route::middleware('admin_db')
                 ->prefix('admin_db')
                 ->group(base_path('routes/admin.php'));

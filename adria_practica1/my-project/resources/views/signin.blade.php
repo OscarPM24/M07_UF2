@@ -27,6 +27,9 @@
         <!-- <a> per redirigir a la view de signup -->
         <!-- Fem servir la instància url() per cridar el path Adria/signin -->
         <a href="{{ route('signup') }}">Crear usuari</a><br>
+        <!-- variable que en cas de fer signin amb user/pwd incorrectes -->
+        <!-- ens mostrarà 'Login incorrecte' -->
+        {{ $error }}
       </form>
 </body>
 </html>

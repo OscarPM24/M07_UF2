@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centres</title>
+    <title>Alumnat</title>
 </head>
-    <!-- Vista que llista els nostres centres -->
+    <!-- Vista que llista el nostre alumnat -->
     <body>
-        <h1>LLISTA CENTRES</h1>
+        <h1>LLISTA ALUMNAT</h1>
         <!-- Taula per mostrar els resultats -->
         <table> 
             <!-- Capceleres de les columnes -->
             <tr>
                 <th>ID</th>
                 <th>NAME</th>
-                <th>ADRESS</th>
-                <th>CP</th>
-                <th>CITY</th>
+                <th>SURNAME</th>
+                <th>ROL</th>
+                <th>EMAIL</th>
             </tr>
             <!-- ------------------------------------------------ -->
-            <!-- --  Lògica per mostrar les dades dels centres -- -->
+            <!-- --  Lògica per mostrar les dades dels alumnes -- -->
             <!-- Doble @foreach aniuat per recorrer ambdós arrays -->
             <!-- ------------------------------------------------ -->
             <!-- Explicació:                                      -->
             <!-- El primer loop ens permet accedir al valor que   -->
-            <!-- conté l'array $centres (arrays associatius).     -->
+            <!-- conté l'array $alumnes (arrays associatius).     -->
             <!-- El segon loop ens permet accedir als atributs de -->
             <!-- cada array associatiu. Obtem per un altre ús de  -->
             <!-- foreach, ja què mostrarem tots els atributs i em -->
             <!-- sembla una forma més pràctica d'executar-ho.     -->
             <!-- Alternativa:                                     -->
-            <!-- Podem accedir a l'array associatiu ($centre) per -->
-            <!-- mitjà de la seva clau amb $centre['clau']. Com   -->
+            <!-- Podem accedir a l'array associatiu ($alumne) per -->
+            <!-- mitjà de la seva clau amb $alumne['clau']. Com   -->
             <!-- he dit, però, al voler mostrar totes les propie- -->
             <!-- tats, considero més eficient aquest mètode.      -->
-            @foreach($centres as $centre)
+            @foreach($alumnes as $alumne)
                 <tr>
-                @foreach($centre as $atribut)
+                @foreach($alumne as $atribut)
                 <!-- $atribut equival a cada propietat de l'array -->
                 <td>{{ $atribut }}</td>
                 @endforeach
@@ -47,5 +47,5 @@
         <!-- amb name->('back'). Aquesta ruta està declarada en  -->
         <!-- admin.php                                           -->
         <a href="{{ route('back') }}">ADMIN VISTA</a>
-</body>
+    </body>
 </html>
