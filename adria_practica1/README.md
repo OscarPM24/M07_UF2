@@ -18,3 +18,5 @@
 [Video-pràctica 1 SIGN IN + SIGN UP AMB LARAVEL](https://drive.google.com/file/d/1lk2RWPMF2u4Q-FX2OtURfunUKNZH112v/view?usp=sharing)
 
 [Video-pràctica 2 SIGN IN + SIGN UP AMB LARAVEL](https://drive.google.com/file/d/1g0CLk-M7ue8fgQbcuoGP4hG7bEZo_YWB/view?usp=sharing)
+
+[Video-pràctica 3 Preparació BBDD](https://drive.google.com/file/d/1QHrpG1oCsdJBVitDF3pY393OqrWe9nwZ/view?usp=sharing)
